@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package proto.test;
+option go_package = "proto";
+
+service TestService {
+  rpc Large(LargeRequest) returns (LargeResponse) {}
+}
+
+message LargeRequest {}
+
+message LargeResponse {
+	bytes Large = 1;
+}
